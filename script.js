@@ -10,10 +10,8 @@ light.style.top = e.clientY + "px";
 });
 
 gsap.from(".hero-image",{
-scale:0,
-opacity:0,
-duration:1.5,
-ease:"power4.out"
+scale:1,
+opacity:1,
 });
 
 gsap.from(".hero-title",{
