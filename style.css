@@ -18,18 +18,18 @@ overflow-x:hidden;
 
 #cursor-light{
 position:fixed;
-width:200px;
-height:200px;
-border-radius:30%;
+width:150px;
+height:150px;
+border-radius:50%;
 pointer-events:none;
-background:radial-gradient
+background:radial-gradient(
 circle,
-rgba(255,255,255,.86,
+rgba(169,185,97,.8),
 transparent 70%
 );
 transform:translate(-50%,-50%);
 z-index:999;
-box-shadow:0 0 60px rgba(255,255,255,.6);
+box-shadow:0 0 60px rgba(169,185,97,.6);
 }
 
 /* ========================= */
@@ -63,14 +63,31 @@ box-shadow:0 0 60px rgba(255,255,255,.6);
 
 .bottom-nav a{
     text-decoration:none;
-    color:#5C5857;
+    color:black;
     transition:.3s;
     font-size:14px;
     font-weight:500;
+    position:relative;
 }
 
 .bottom-nav a:hover{
-    color:#354B88;
+    color:#A9B961;
+}
+
+.bottom-nav a.active{
+    color:#A9B961;
+}
+
+.bottom-nav a.active::before{
+    content:'';
+    position:absolute;
+    width:8px;
+    height:8px;
+    background:#A9B961;
+    border-radius:50%;
+    bottom:-15px;
+    left:50%;
+    transform:translateX(-50%);
 }
 
 /* ========================= */
